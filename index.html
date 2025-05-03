@@ -15,7 +15,7 @@
                 extend: {
                     colors: {
                         aviation: {
-                            blue: '#003366',
+                            blue: '#e31009',
                             lightblue: '#1E90FF',
                             darkblue: '#001a33',
                             yellow: '#FFD700',
@@ -312,7 +312,7 @@
 
     <script>
         // Initialize Mapbox map
-        mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+        mapboxgl.accessToken = 'pk.eyJ1IjoibmRvbWUyMiIsImEiOiJjbWE4MHpzcW8waHQ3MnFzZ2locGhvNzVyIn0.G0XRxSa4D0qiVIEFoMW-qw';
         
         const map = new mapboxgl.Map({
             container: 'map',
@@ -327,6 +327,7 @@
         
         // Sample aerodrome data for prototype
         const aerodromes = [
+
             {
                 icao: "FAOR",
                 name: "OR Tambo International Airport",
@@ -336,6 +337,8 @@
                 runways: ["03L/21R", "03R/21L"],
                 elevation: 5554
             },
+
+            
             {
                 icao: "HKJK",
                 name: "Jomo Kenyatta International Airport",
@@ -371,7 +374,524 @@
                 coordinates: [18.598, -33.965],
                 runways: ["01/19", "16/34"],
                 elevation: 151
-            }
+            },
+            //new aerodromes
+            {
+                icao: "DTTA",
+                name: "Tunis-Carthage International Airport",
+                city: "Tunis",
+                country: "Tunisia",
+                coordinates: [10.227, 36.851],
+                runways: ["01/19", "11/29"],
+                elevation: 22
+            },
+            {
+                icao: "DTTJ",
+                name: "Djerba-Zarzis International Airport",
+                city: "Djerba",
+                country: "Tunisia",
+                coordinates: [10.775, 33.875],
+                runways: ["09/27"],
+                elevation: 13
+            },
+            {
+                icao: "GMAD",
+                name: "Mohammed V International Airport",
+                city: "Casablanca",
+                country: "Morocco",
+                coordinates: [-7.587, 33.367],
+                runways: ["02/20", "06/24"],
+                elevation: 656
+            },
+            {
+                icao: "GMME",
+                name: "Rabat-Salé Airport",
+                city: "Rabat",
+                country: "Morocco",
+                coordinates: [-6.787, 34.051],
+                runways: ["03/21"],
+                elevation: 276
+            },
+            {
+                icao: "DAAG",
+                name: "Houari Boumediene Airport",
+                city: "Algiers",
+                country: "Algeria",
+                coordinates: [3.215, 36.691],
+                runways: ["05/23", "09/27"],
+                elevation: 82
+            },
+            {
+                icao: "DAUA",
+                name: "Tamanrasset Airport",
+                city: "Tamanrasset",
+                country: "Algeria",
+                coordinates: [5.451, 22.812],
+                runways: ["02/20"],
+                elevation: 4518
+            },
+            {
+                icao: "GABS",
+                name: "Bamako-Sénou International Airport",
+                city: "Bamako",
+                country: "Mali",
+                coordinates: [-7.950, 12.533],
+                runways: ["06/24"],
+                elevation: 1247
+            },
+            {
+                icao: "DRRN",
+                name: "Diori Hamani International Airport",
+                city: "Niamey",
+                country: "Niger",
+                coordinates: [2.170, 13.482],
+                runways: ["09/27"],
+                elevation: 732
+            },
+            {
+                icao: "GOOY",
+                name: "Blaise Diagne International Airport",
+                city: "Dakar",
+                country: "Senegal",
+                coordinates: [-17.073, 14.740],
+                runways: ["01/19"],
+                elevation: 290
+            },
+            {
+                icao: "GVAC",
+                name: "Amílcar Cabral International Airport",
+                city: "Sal",
+                country: "Cape Verde",
+                coordinates: [-22.949, 16.741],
+                runways: ["01/19"],
+                elevation: 177
+            },
+            {
+                icao: "FIMP",
+                name: "Sir Seewoosagur Ramgoolam International Airport",
+                city: "Plaine Magnien",
+                country: "Mauritius",
+                coordinates: [57.684, -20.430],
+                runways: ["14/32"],
+                elevation: 186
+            },
+            {
+                icao: "FMCH",
+                name: "Prince Said Ibrahim International Airport",
+                city: "Moroni",
+                country: "Comoros",
+                coordinates: [43.272, -11.534],
+                runways: ["02/20"],
+                elevation: 93
+            },
+            {
+                icao: "HTZA",
+                name: "Abeid Amani Karume International Airport",
+                city: "Zanzibar",
+                country: "Tanzania",
+                coordinates: [39.225, -6.222],
+                runways: ["18/36"],
+                elevation: 54
+            },
+            {
+                icao: "HTDA",
+                name: "Julius Nyerere International Airport",
+                city: "Dar es Salaam",
+                country: "Tanzania",
+                coordinates: [39.203, -6.878],
+                runways: ["05/23"],
+                elevation: 182
+            },
+            {
+                icao: "HUEN",
+                name: "Entebbe International Airport",
+                city: "Entebbe",
+                country: "Uganda",
+                coordinates: [32.443, 0.042],
+                runways: ["12/30", "17/35"],
+                elevation: 3782
+            },
+            {
+                icao: "HRYR",
+                name: "Kigali International Airport",
+                city: "Kigali",
+                country: "Rwanda",
+                coordinates: [30.140, -1.969],
+                runways: ["10/28"],
+                elevation: 4859
+            },
+            {
+                icao: "HLLB",
+                name: "Mitiga International Airport",
+                city: "Tripoli",
+                country: "Libya",
+                coordinates: [13.276, 32.894],
+                runways: ["03/21"],
+                elevation: 36
+            },
+            {
+                icao: "HLLT",
+                name: "Tripoli International Airport",
+                city: "Tripoli",
+                country: "Libya",
+                coordinates: [13.159, 32.663],
+                runways: ["09/27", "18/36"],
+                elevation: 263
+            },
+            {
+                icao: "GLRB",
+                name: "Roberts International Airport",
+                city: "Monrovia",
+                country: "Liberia",
+                coordinates: [-10.359, 6.234],
+                runways: ["04/22"],
+                elevation: 316
+            },
+            {
+                icao: "DGAA",
+                name: "Kotoka International Airport",
+                city: "Accra",
+                country: "Ghana",
+                coordinates: [-0.167, 5.605],
+                runways: ["03/21"],
+                elevation: 205
+            },
+            {
+                icao: "DFFD",
+                name: "Ouagadougou Airport",
+                city: "Ouagadougou",
+                country: "Burkina Faso",
+                coordinates: [-1.512, 12.353],
+                runways: ["04/22"],
+                elevation: 1037
+            },
+            {
+                icao: "DXNG",
+                name: "Lomé-Tokoin International Airport",
+                city: "Lomé",
+                country: "Togo",
+                coordinates: [1.254, 6.166],
+                runways: ["04/22"],
+                elevation: 72
+            },
+            {
+                icao: "DBBB",
+                name: "Cadjehoun Airport",
+                city: "Cotonou",
+                country: "Benin",
+                coordinates: [2.384, 6.357],
+                runways: ["06/24"],
+                elevation: 19
+            },
+            {
+                icao: "FCPP",
+                name: "Pointe-Noire Airport",
+                city: "Pointe-Noire",
+                country: "Republic of the Congo",
+                coordinates: [11.886, -4.816],
+                runways: ["17/35"],
+                elevation: 55
+            },
+            {
+                icao: "FZAA",
+                name: "N'djili Airport",
+                city: "Kinshasa",
+                country: "DR Congo",
+                coordinates: [15.444, -4.386],
+                runways: ["06/24"],
+                elevation: 1027
+            },
+            {
+                icao: "FZNA",
+                name: "Lubumbashi International Airport",
+                city: "Lubumbashi",
+                country: "DR Congo",
+                coordinates: [27.531, -11.591],
+                runways: ["07/25"],
+                elevation: 4295
+            },
+            {
+                icao: "FQMA",
+                name: "Maputo International Airport",
+                city: "Maputo",
+                country: "Mozambique",
+                coordinates: [32.573, -25.921],
+                runways: ["05/23"],
+                elevation: 145
+            },
+            //more for ethiopia, south sudan, sudan chad, niger, drc, somalia, angola,libya, namibia, zibambwe,cameroon, western sahara, eritrea, djibouti
+            
+    {
+        "icao": "HAAB",
+        "name": "Addis Ababa Bole International Airport",
+        "city": "Addis Ababa",
+        "country": "Ethiopia",
+        "coordinates": [38.799, 8.977],
+        "runways": ["07R/25L", "07L/25R"],
+        "elevation": 7657
+    },
+    {
+        "icao": "HADR",
+        "name": "Dire Dawa International Airport",
+        "city": "Dire Dawa",
+        "country": "Ethiopia",
+        "coordinates": [41.854, 9.624],
+        "runways": ["05/23"],
+        "elevation": 3829
+    },
+    {
+        "icao": "HSSJ",
+        "name": "Juba International Airport",
+        "city": "Juba",
+        "country": "South Sudan",
+        "coordinates": [31.601, 4.872],
+        "runways": ["13/31"],
+        "elevation": 1513
+    },
+    {
+        "icao": "HSSM",
+        "name": "Malakal Airport",
+        "city": "Malakal",
+        "country": "South Sudan",
+        "coordinates": [31.652, 9.559],
+        "runways": ["17/35"],
+        "elevation": 1291
+    },
+    {
+        "icao": "HSSS",
+        "name": "Khartoum International Airport",
+        "city": "Khartoum",
+        "country": "Sudan",
+        "coordinates": [32.553, 15.590],
+        "runways": ["18/36", "12/30"],
+        "elevation": 1265
+    },
+    {
+        "icao": "HSFS",
+        "name": "Port Sudan New International Airport",
+        "city": "Port Sudan",
+        "country": "Sudan",
+        "coordinates": [37.216, 19.434],
+        "runways": ["16/34"],
+        "elevation": 135
+    },
+    {
+        "icao": "FTTJ",
+        "name": "N'Djamena International Airport",
+        "city": "N'Djamena",
+        "country": "Chad",
+        "coordinates": [15.034, 12.134],
+        "runways": ["05/23"],
+        "elevation": 968
+    },
+    {
+        "icao": "FTTA",
+        "name": "Abéché Airport",
+        "city": "Abéché",
+        "country": "Chad",
+        "coordinates": [20.844, 13.847],
+        "runways": ["05/23"],
+        "elevation": 1788
+    },
+    {
+        "icao": "DRRN",
+        "name": "Diori Hamani International Airport",
+        "city": "Niamey",
+        "country": "Niger",
+        "coordinates": [2.170, 13.482],
+        "runways": ["09/27"],
+        "elevation": 732
+    },
+    {
+        "icao": "DRZA",
+        "name": "Zinder Airport",
+        "city": "Zinder",
+        "country": "Niger",
+        "coordinates": [8.984, 13.779],
+        "runways": ["08/26"],
+        "elevation": 1516
+    },
+    {
+        "icao": "FZAA",
+        "name": "N'djili Airport",
+        "city": "Kinshasa",
+        "country": "DR Congo",
+        "coordinates": [15.444, -4.386],
+        "runways": ["06/24"],
+        "elevation": 1027
+    },
+    {
+        "icao": "FZNA",
+        "name": "Lubumbashi International Airport",
+        "city": "Lubumbashi",
+        "country": "DR Congo",
+        "coordinates": [27.531, -11.591],
+        "runways": ["07/25"],
+        "elevation": 4295
+    },
+    {
+        "icao": "HCMM",
+        "name": "Aden Adde International Airport",
+        "city": "Mogadishu",
+        "country": "Somalia",
+        "coordinates": [45.304, 2.014],
+        "runways": ["05/23"],
+        "elevation": 29
+    },
+    {
+        "icao": "HCMH",
+        "name": "Hargeisa Egal International Airport",
+        "city": "Hargeisa",
+        "country": "Somalia",
+        "coordinates": [44.061, 9.518],
+        "runways": ["09/27"],
+        "elevation": 4423
+    },
+    {
+        "icao": "FNLU",
+        "name": "Quatro de Fevereiro Airport",
+        "city": "Luanda",
+        "country": "Angola",
+        "coordinates": [13.231, -8.858],
+        "runways": ["05/23", "07/25"],
+        "elevation": 243
+    },
+    {
+        "icao": "FNBG",
+        "name": "Benguela Airport",
+        "city": "Benguela",
+        "country": "Angola",
+        "coordinates": [13.403, -12.609],
+        "runways": ["11/29"],
+        "elevation": 118
+    },
+    {
+        "icao": "HLLT",
+        "name": "Tripoli International Airport",
+        "city": "Tripoli",
+        "country": "Libya",
+        "coordinates": [13.159, 32.663],
+        "runways": ["09/27", "18/36"],
+        "elevation": 263
+    },
+    {
+        "icao": "HLLB",
+        "name": "Mitiga International Airport",
+        "city": "Tripoli",
+        "country": "Libya",
+        "coordinates": [13.276, 32.894],
+        "runways": ["03/21"],
+        "elevation": 36
+    },
+    {
+        "icao": "FYWH",
+        "name": "Hosea Kutako International Airport",
+        "city": "Windhoek",
+        "country": "Namibia",
+        "coordinates": [17.093, -22.486],
+        "runways": ["08/26", "16/34"],
+        "elevation": 5643
+    },
+    {
+        "icao": "FYWB",
+        "name": "Walvis Bay Airport",
+        "city": "Walvis Bay",
+        "country": "Namibia",
+        "coordinates": [14.645, -22.980],
+        "runways": ["09/27"],
+        "elevation": 299
+    },
+    {
+        "icao": "FVHA",
+        "name": "Harare International Airport",
+        "city": "Harare",
+        "country": "Zimbabwe",
+        "coordinates": [31.093, -17.922],
+        "runways": ["05/23"],
+        "elevation": 4887
+    },
+    {
+        "icao": "FVFA",
+        "name": "Joshua Mqabuko Nkomo International Airport",
+        "city": "Bulawayo",
+        "country": "Zimbabwe",
+        "coordinates": [28.618, -20.017],
+        "runways": ["07/25"],
+        "elevation": 4359
+    },
+    {
+        "icao": "FKKD",
+        "name": "Douala International Airport",
+        "city": "Douala",
+        "country": "Cameroon",
+        "coordinates": [9.719, 4.006],
+        "runways": ["12/30"],
+        "elevation": 33
+    },
+    {
+        "icao": "FKKY",
+        "name": "Yaoundé Nsimalen International Airport",
+        "city": "Yaoundé",
+        "country": "Cameroon",
+        "coordinates": [11.524, 3.836],
+        "runways": ["17/35"],
+        "elevation": 2275
+    },
+    {
+        "icao": "GMMH",
+        "name": "Hassan I Airport",
+        "city": "El Aaiún",
+        "country": "Western Sahara",
+        "coordinates": [-13.219, 27.152],
+        "runways": ["06/24"],
+        "elevation": 207
+    },
+    {
+        "icao": "GMML",
+        "name": "Dakhla Airport",
+        "city": "Dakhla",
+        "country": "Western Sahara",
+        "coordinates": [-15.933, 23.718],
+        "runways": ["06/24"],
+        "elevation": 36
+    },
+    {
+        "icao": "HHAS",
+        "name": "Asmara International Airport",
+        "city": "Asmara",
+        "country": "Eritrea",
+        "coordinates": [38.911, 15.292],
+        "runways": ["07/25"],
+        "elevation": 7661
+    },
+    {
+        "icao": "HHMS",
+        "name": "Massawa International Airport",
+        "city": "Massawa",
+        "country": "Eritrea",
+        "coordinates": [39.370, 15.670],
+        "runways": ["08/26"],
+        "elevation": 194
+    },
+    {
+        "icao": "HDAM",
+        "name": "Djibouti-Ambouli International Airport",
+        "city": "Djibouti City",
+        "country": "Djibouti",
+        "coordinates": [43.159, 11.547],
+        "runways": ["09/27"],
+        "elevation": 49
+    },
+    {
+        "icao": "HDOB",
+        "name": "Obock Airport",
+        "city": "Obock",
+        "country": "Djibouti",
+        "coordinates": [43.267, 11.967],
+        "runways": ["08/26"],
+        "elevation": 226
+    },
+            
         ];
         
         // Sample NOTAM data for prototype
@@ -510,7 +1030,7 @@
             const seconds = Math.floor((new Date() - date) / 1000);
             
             let interval = Math.floor(seconds / 31536000);
-            if (interval >= 1) return interval + " year" + (interval === 1 ? "" : "s");
+            if (interval >= 1) return interval + " month" + (interval === 1 ? "" : "s");
             
             interval = Math.floor(seconds / 2592000);
             if (interval >= 1) return interval + " month" + (interval === 1 ? "" : "s");
